@@ -1,0 +1,109 @@
+@mixin Roboto-medium {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+@mixin Roboto-bold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+$color-black: #030305;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 1px solid #E5E5E5;
+    padding: 25px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+
+        .logotype {
+            vertical-align: bottom;
+        }
+
+        .navigation {
+            margin-left: 244px;
+
+            ul {
+                display: flex;
+                list-style: none;
+
+                .tab {
+                    margin-right: 115px;
+
+                    a {
+                        @include Roboto-medium;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: $color-black;
+                    }
+
+                    a:hover {
+                        border-bottom: 2px solid #000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 104px 0 154px;
+
+    .container {
+        .main-info {
+            height: 705px;
+
+            h1 {
+                max-width: 855px;
+                margin-bottom: 40px;
+                @include Roboto-bold;
+                font-size: 80px;
+                line-height: 88px;
+                color: $color-black;
+            }
+
+            p {
+                max-width: 502px;
+                margin-bottom: 40px;
+                @include Roboto-medium;
+                font-size: 16px;
+                line-height: 21px;
+                color: $color-black;
+            }
+
+            a {
+                @include Roboto-bold;
+                font-size: 16px;
+                line-height: 150%;
+                padding: 20px 53px;
+                background-color: $color-black;
+                color: #fff;
+                transition: background-color .5s;
+            }
+
+            a:hover {
+                cursor: pointer;
+                background-color: #575757;
+            }
+        }
+    }
+}

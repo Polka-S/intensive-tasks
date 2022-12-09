@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  border-bottom: 1px solid #E5E5E5;
+  padding: 25px 0;
+}
+header .container {
+  display: flex;
+  align-items: center;
+}
+header .container .logotype {
+  vertical-align: bottom;
+}
+header .container .navigation {
+  margin-left: 244px;
+}
+header .container .navigation ul {
+  display: flex;
+  list-style: none;
+}
+header .container .navigation ul .tab {
+  margin-right: 115px;
+}
+header .container .navigation ul .tab a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #030305;
+}
+header .container .navigation ul .tab a:hover {
+  border-bottom: 2px solid #000;
+}
+
+.main {
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 104px 0 154px;
+}
+.main .container .main-info {
+  height: 705px;
+}
+.main .container .main-info h1 {
+  max-width: 855px;
+  margin-bottom: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 88px;
+  color: #030305;
+}
+.main .container .main-info p {
+  max-width: 502px;
+  margin-bottom: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #030305;
+}
+.main .container .main-info a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 20px 53px;
+  background-color: #030305;
+  color: #fff;
+  transition: background-color 0.5s;
+}
+.main .container .main-info a:hover {
+  cursor: pointer;
+  background-color: #575757;
+}/*# sourceMappingURL=style.css.map */
