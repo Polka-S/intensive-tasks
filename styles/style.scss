@@ -8,11 +8,25 @@
     font-weight: 700;
 }
 
+@mixin button {
+    font-size: 16px;
+    line-height: 150%;
+    background-color: $color-black;
+    color: #fff;
+    transition: background-color .5s;
+}
+
 $color-black: #030305;
 
 * {
     padding: 0;
     margin: 0;
+}
+
+h2 {
+    @include Roboto-bold;
+    font-size: 60px;
+    line-height: 70px;
 }
 
 a {
@@ -27,35 +41,32 @@ a {
 header {
     border-bottom: 1px solid #E5E5E5;
     padding: 25px 0;
+    display: flex;
+    align-items: center;
 
-    .container {
-        display: flex;
-        align-items: center;
+    .logotype {
+        vertical-align: bottom;
+    }
 
-        .logotype {
-            vertical-align: bottom;
-        }
+    .navigation {
+        margin-left: 244px;
 
-        .navigation {
-            margin-left: 244px;
+        ul {
+            display: flex;
+            list-style: none;
 
-            ul {
-                display: flex;
-                list-style: none;
+            .tab {
+                margin-right: 115px;
 
-                .tab {
-                    margin-right: 115px;
+                a {
+                    @include Roboto-medium;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: $color-black;
+                }
 
-                    a {
-                        @include Roboto-medium;
-                        font-size: 15px;
-                        line-height: 18px;
-                        color: $color-black;
-                    }
-
-                    a:hover {
-                        border-bottom: 2px solid #000;
-                    }
+                a:hover {
+                    border-bottom: 2px solid #000;
                 }
             }
         }
@@ -67,37 +78,140 @@ header {
     background-size: cover;
     background-position: center;
     padding: 104px 0 154px;
+    margin-bottom: 100px;
 
-    .container {
-        .main-info {
-            height: 705px;
+    .main-info {
+        height: 705px;
 
-            h1 {
-                max-width: 855px;
-                margin-bottom: 40px;
-                @include Roboto-bold;
-                font-size: 80px;
-                line-height: 88px;
-                color: $color-black;
+        h1 {
+            max-width: 855px;
+            margin-bottom: 40px;
+            @include Roboto-bold;
+            font-size: 80px;
+            line-height: 88px;
+            color: $color-black;
+        }
+
+        p {
+            max-width: 502px;
+            margin-bottom: 40px;
+            @include Roboto-medium;
+            font-size: 16px;
+            line-height: 21px;
+            color: $color-black;
+        }
+
+        a {
+            @include Roboto-bold;
+            @include button;
+            padding: 20px 53px;
+
+        }
+
+        a:hover {
+            cursor: pointer;
+            background-color: #575757;
+        }
+    }
+}
+
+.car {
+    margin-bottom: 100px;
+
+    .variants {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        .auto {
+            max-width: 384px;
+            text-align: center;
+            margin-bottom: 40px;
+
+            .auto-photo {
+                vertical-align: bottom;
+                margin-bottom: 15px;
             }
 
-            p {
-                max-width: 502px;
-                margin-bottom: 40px;
+            .auto-name {
+                @include Roboto-bold;
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 17px;
+            }
+
+            .auto-info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 13px;
+
+                .auto-specification {
+                    width: 110px;
+                    height: 92px;
+
+                    img {
+                        margin: 0 7.5px 11px;
+                    }
+                }
+            }
+
+            .auto-action {
+                a {
+                    @include button;
+                    @include Roboto-bold;
+                    padding: 15px 122px;
+                }
+
+                a:hover {
+                    cursor: pointer;
+                    background-color: #575757;
+                }
+            }
+        }
+    }
+}
+
+.booking {
+    position: relative;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        @include Roboto-medium;
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 60px;
+        color: #5D5D5F;
+    }
+
+    .form-and-photo {
+        overflow: hidden;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            max-width: 326px;
+            margin-bottom: 121px;
+
+            input {
+                margin-bottom: 15px;
+                padding: 22px 0 22px 18px;
                 @include Roboto-medium;
                 font-size: 16px;
                 line-height: 21px;
-                color: $color-black;
+                border: 1px solid #5D5D5F;
+                box-sizing: border-box;
+                outline: none;
             }
 
             a {
                 @include Roboto-bold;
-                font-size: 16px;
-                line-height: 150%;
-                padding: 20px 53px;
-                background-color: $color-black;
-                color: #fff;
-                transition: background-color .5s;
+                @include button;
+                padding: 20px 116px;
             }
 
             a:hover {
@@ -105,5 +219,29 @@ header {
                 background-color: #575757;
             }
         }
+
+        .photo-for-form {
+            position: absolute;
+            bottom: 0;
+            left: 481px;
+        }
+    }
+}
+
+footer {
+    border-top: 1px solid #E5E5E5;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    align-items: center;
+
+    .logotype {
+        vertical-align: bottom;
+    }
+
+    .rights {
+        @include Roboto-medium;
+        font-size: 15px;
+        line-height: 18px;
     }
 }
